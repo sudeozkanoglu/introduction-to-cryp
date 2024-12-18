@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cryp_project
+    username: postgres
+    password: 301811
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        formatsql: true
+security:
+  jwt:
+    secret: "sudeozkanogluceintroductiontocryptologyfinalprojectaboutjwttoken"
